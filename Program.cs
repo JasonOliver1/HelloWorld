@@ -1,6 +1,9 @@
 ﻿namespace HelloWorld;
 using System;
 public class Pizza {
+    /// <summary>
+    /// 
+    /// </summary>
     public string Size{
         get;
         set;
@@ -38,8 +41,6 @@ public class Pizza {
 
 
 
-
-
 class Program {
     static void Main(string[] args) {
         List<string> normToppings = new() {"tomato", "cheese"}; // giver en list.
@@ -47,8 +48,8 @@ class Program {
 
         Pizza normPizza = new ("normal", normToppings);
         Pizza bigPizza = new ("family ", bigToppings);
-        Number1 number1 = new ("", new List<string>());
-
+        Number1 number1 = new Number1();
+        Family family = new Family ("", new List<string>(normToppings));
 
         Console.WriteLine("Din pizza størrelse er " + normPizza.Size); 
         Console.WriteLine("Toppings: " + string.Join(", ", normToppings));
@@ -60,6 +61,7 @@ class Program {
         Console.WriteLine(bigPizza.ToString());
         // Prøver fixedPrices.cs
         Console.WriteLine(number1.ToString());
+        Console.WriteLine(family.ToString());
 
 
     }
